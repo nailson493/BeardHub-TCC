@@ -41,4 +41,20 @@
     <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <!-- <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.15.0/firebase-app.js" integrity="sha512-KakHaWvNgg3Mo/LptevcdwXzAmSFCFHrsvRUIRbUb++of57rXmIPQiAmpEeqaEdvhVk0ljxT2FpQk+wvP+j5LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+
+
+    <!-- <script  type="module" src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.15.0/firebase-analytics.min.js" integrity="sha512-hxKFCxW59c50IIT42oQbQTkpc+mG+cmEfDe30VltOASrnfIqNYfS1oB93JBgyeJBgDaO8KhOixeNbNcKh4lfvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.15.0/firebase-auth.min.js" integrity="sha512-ybRazwuyNeWk6j3DM6HALA6tUGA8da5zNnClP77gxoWlN1Z3VYCqeHvm7RvQdm2JKLgG2eK+h2cXWaT1eNP5vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script> -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.15.0/firebase-database.min.js" integrity="sha512-4B8+i9GmlemoJP0+aAmKb6GtWXpdehltgZt0o6KBNM+wkxpjqMfJfyTIlsokZMWUXYcjqmJKf1Q5aIX8XrFYWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 </head>

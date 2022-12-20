@@ -1,7 +1,6 @@
 {
   "name": "beardhub-tcc",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,6 +17,7 @@
   },
   "homepage": "https://github.com/nailson493/BeardHub-TCC#readme",
   "dependencies": {
-    "firebase": "^9.15.0"
-  }
+    "firebase": "^9.13.0"
+  },
+  "description": ""
 }

@@ -14,7 +14,7 @@
             </a>
             <div class="w-full bg-dark-500 rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-                    <h1 class="text-xl font-bold leading-tight tracking-tight text-white-900 md:text-2xl dark:text-white">
+                    <h1 class="text-xl font-bold leading-tight tracking-tight text-white-900 md:text-2xl dark:text-white" id="displayName">
                         Faça login em sua conta
                     </h1>
                     <form class="space-y-4 md:space-y-6" action="#">
@@ -39,8 +39,10 @@
                         </div>
                         <button type="submit" id="btnlogin" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">Login</button>
                         <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                            Não tem uma conta ainda?<a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Inscrever-se</a>
+                            Não tem uma conta ainda? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500"> Inscrever-se</a>
                         </p>
+                        <button type="button" id="btnAuthGoogle" class="text-gray-900 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-gray-500 inline-flex items-center">
+                        <img class="w-6 h-6 right-3 relative" src="img/google.svg" alt=""> Login Com Google </button>
                     </form>
                 </div>
             </div>
@@ -50,3 +52,5 @@
     </body>
 
      <script src="_js/login.js"></script>
+     <script src="_js/auth.js"></script>
+
