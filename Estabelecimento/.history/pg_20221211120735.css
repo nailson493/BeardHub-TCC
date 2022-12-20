@@ -1,0 +1,145 @@
+body{
+    height: 100vh;
+}
+
+
+.side-card img{
+    min-height: 50px;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+#default-carousel{
+ 
+}
+
+
+#description h1{
+    margin-left: 10%;
+}
+
+.text-description h1{
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+
+}
+
+#lista{
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.bar a{
+
+    width: 100%;
+}
+
+    .bar img{
+        border-radius: 50%;
+        width: 100%;
+      
+    }
+
+.icon-profile{
+    width: 18%;
+}
+
+
+#protect{
+    margin-top: 10%;
+}
+
+#protect img{
+    min-width: 20%;
+    max-width: 50%;
+    width: 20%;
+    min-height: 20%;
+    margin-left: -1.5%;
+}
+
+#protect p{
+
+    width: 50%;
+}
+
+#protect a{
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+#place{
+    list-style: none;
+}
+
+
+
+
+
+
+
+
+#form{
+    margin-left: 60%;
+    background-color: #111827;
+    padding: 1%;
+    border-radius: 2%;
+}
+
+#datepicker-header{
+    background-color: blueviolet;
+}
+
+
+
+
+@media screen and (max-width: 756px){
+    .side-card{
+        display: none;
+    }
+    #default-carousel{
+        width: 210%;
+        height: 300px;
+    }
+    #protect{
+        margin-top: 20%;
+    }
+    #form{
+        display: none;
+    }
+    #protect p{
+        width: 90%;
+    }
+    #protect img{
+        margin-top: -10%;
+        width: 25%;
+    }
+}
+@media screen and (max-width: 661px){
+        #secao{
+            margin-left: 20px;
+        }
+        #default-carousel{
+            width: 190%;
+            margin-left: 10px;
+            min-width: 550px;
+        }
+        #protect img{
+            margin-top: -10%;
+            width: 25%;
+        }
+     }
+
+     @media screen and (max-width: 376px){
+        #protect img{
+            width: 20%;
+        }
+
+         }
+
+
+@media screen and (max-width: 376px){
+    #default-carousel{
+        width: 360px;
+        margin-left: px;
+    }
+    }

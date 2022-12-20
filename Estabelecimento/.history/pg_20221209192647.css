@@ -1,0 +1,32 @@
+body{
+    height: 100vh;
+}
+
+
+.side-card img{
+    min-height: 50px;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+#description h1{
+    margin-left: 10%;
+}
+
+#form{
+    background-color: black;
+}
+
+
+
+ @media screen and (max-width: 415px){ 
+    .side-card{
+        display: none;
+    }
+    #default-carousel{
+        height: 100px;
+        left: 50%;
+    }
+
+
+} 
