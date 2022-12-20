@@ -2,8 +2,6 @@
  include "head.php";
 ?>
 
-
-
 <body>
 <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
@@ -35,12 +33,11 @@
 export {
   auth,
 };
+
   </script>
     <?php
     include "header.php";
     include "js.php";
-
-
 
     switch($_GET['r']){
 
@@ -62,11 +59,8 @@ export {
         default:
                 include "views/inicial.php";
                 break;
-            
     }
     
-
-
     ?>
     <?php include "footer.php";?>
 
