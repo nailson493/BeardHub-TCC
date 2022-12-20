@@ -66,17 +66,18 @@
             <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
           </li>
           <li>
+            <a href="#" class="block py-2 pl-3 pr-4  text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZVPricing">Services</a>
+          </li>
+          <!-- <li>
             <a href="#" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZVAbout">Falta</a>
           </li>
           <li>
             <a href="#" class="block py-2 pl-3 pr-4  text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZVServices"> about</a>
           </li>
-          <li>
-            <a href="#" class="block py-2 pl-3 pr-4  text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZVPricing">Services</a>
-          </li>
+          
           <li>
             <a href="#" class="block py-2 pl-3 pr-4  text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZVContact"> algumna</a>
-          </li>
+          </li> -->
         </ul>
       </div>
 
@@ -91,8 +92,8 @@
         </button>
         </div> -->
       <div class="flex relative items-center lg:order-2" id="text-header">
-        <a href="painel.php?r=signup" class="text-white  hover:bg-zinc-400  focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg-px-5 py2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800 ">Log in</a>
-        <a href="painel.php?r=login" class="text-white  hover:bg-blue-400  focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg-px-5 py2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800 ">Sign Up</a>
+        <a href="painel.php?r=login" class="text-white  hover:bg-zinc-400  focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg-px-5 py2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800 ">Log in</a>
+        <a href="painel.php?r=signup" class="text-white  hover:bg-blue-400  focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg-px-5 py2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800 ">Sign Up</a>
 
 
         <!-- <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV">
