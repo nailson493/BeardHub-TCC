@@ -1,0 +1,107 @@
+<!DOCTYPE hmtl>
+<html lang="en">
+	<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Tailwind Admin Starter Template : Tailwind Toolbox</title>
+            <meta name="author" content="name">
+            <meta name="description" content="description here">
+            <meta name="keywords" content="keywords,here">
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> <!--Replace with your tailwind.css once created-->
+            <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+            <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+            <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
+            <script src="https://cdn.tailwindcss.com"></script>
+        
+            <link rel="stylesheet" href="today.css">
+	</head>
+    <body>
+			
+                <div class="col-span-2 col-start-1"> 
+                    <label for="city" class="block text-sm font-medium text-green-700">Estilo</label>
+                    <input type="text" name="estilo" id="estilo" autocomplete="address-level2" class="mt-1 block rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+                <div class="col-span-2 col-start-1"> 
+                    <label for="city" class="block text-sm font-medium text-green-700">Tempo</label>
+                    <input type="time" step="2" name="tempo" id="tempo" autocomplete="address-level2" class="mt-1 block rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+                
+                <div class="w-96 text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-300 dark:text-gray-400">
+                    <p class="relative top-8"> asdas</p>
+                    <button type="button" class=" ml-[17rem]  text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" onclick="addRow();">Add row</button>
+                </div>
+                <div class="flex justify-start">
+                    <table class="w-96 text-sm text-left text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                                <th  scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">Estilo</th>
+                                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">Tempo</th>
+                            </tr>
+                        </thead>
+                        <tbody id="result">
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <td scope="row"  class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">John</td>
+                                <td scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">Smith</td>
+                            </tr>
+                        </tbody>
+                    </table>
+	            </div>
+
+
+
+    
+
+
+   
+
+    
+<script src="js/script.js"></script>	
+<script>
+    function addRow(){
+	var estilo=document.getElementById('estilo').value;
+	var tempo=document.getElementById('tempo').value;
+ 
+	if(estilo =="" || tempo ==""){
+		alert("Por favor preencha todos os campos");
+	}else{
+		var parent=document.createElement('tr');
+		var col1=document.createElement('td');
+		var col2=document.createElement('p');
+		var text1=document.createTextNode(estilo);
+		var text2=document.createTextNode(tempo);
+        parent.className="bg-white border-b dark:bg-gray-800 dark:border-gray-700";
+        col1.className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white";
+        col2.className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white";
+
+		col1.appendChild(text1);
+		col2.appendChild(text2);
+		parent.appendChild(col1);
+		parent.appendChild(col2);
+ 
+		document.getElementById('result').appendChild(parent); 
+		document.getElementById('estilo').value="";
+		document.getElementById('lastname').value="";
+
+	}
+ 
+}
+</script>
+
+
+
+  <button onclick="myFunction()">Limpar</button>
+
+<script>
+function myFunction() {
+    document.getElementById('result').remove()
+}
+//quando você clicar no botão, o mesmo será deletado
+</script>
+
+
+</body>	
+</html>

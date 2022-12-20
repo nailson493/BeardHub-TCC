@@ -1,0 +1,48 @@
+<!DOCTYPE hmtl>
+<html lang="en">
+	<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Tailwind Admin Starter Template : Tailwind Toolbox</title>
+            <meta name="author" content="name">
+            <meta name="description" content="description here">
+            <meta name="keywords" content="keywords,here">
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> <!--Replace with your tailwind.css once created-->
+            <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+            <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+            <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
+            <script src="https://cdn.tailwindcss.com"></script>
+        
+            <link rel="stylesheet" href="today.css">
+	</head>
+    <p>Select a new car from the list.</p>
+
+    <select id="mySelect" onchange="myFunction()">
+        <option value="aberto">Aberto</option>
+        <option value="fechado">Fechado</option>
+    </select>
+
+<p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
+<input type="time" name="last-name" id="two" autocomplete="family-name" value="12:00" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" disabled>
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("mySelect").value;
+   
+  if (this.value == 'aberto')
+    document.getElementById("demo").innerHTML = "You selected: " + x;
+    
+  if (this.value == 'fechado')
+//   document.getElementById("demo").innerHTML = "You selected: " + x;
+    };
+
+</script>
+
+</body>
+</html>
+    <body>

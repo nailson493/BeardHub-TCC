@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "flowbite-datepicker": "^1.2.2"
-  }
-}
-import Datepicker from 'flowbite-datepicker/Datepicker';

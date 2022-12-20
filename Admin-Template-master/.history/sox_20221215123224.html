@@ -1,0 +1,290 @@
+<!DOCTYPE hmtl>
+<html lang="en">
+	<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Tailwind Admin Starter Template : Tailwind Toolbox</title>
+            <meta name="author" content="name">
+            <meta name="description" content="description here">
+            <meta name="keywords" content="keywords,here">
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> <!--Replace with your tailwind.css once created-->
+            <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+            <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+            <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
+            <script src="https://cdn.tailwindcss.com"></script>
+        
+            <link rel="stylesheet" href="today.css">
+	</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="https://sourcecodester.com">Sourcecodester</a>
+		</div>
+	</nav>
+	<div class="col-md-3"></div>
+	<div class="col-md-6 well">
+		<h3 class="text-primary">JavaScript - Add New Row In Table</h3>
+		<hr style="border-top:1px dotted #ccc;"/>
+		<div class="col-md-4">
+			<form>
+                <div class="col-span-2 col-start-1"> 
+                    <label for="city" class="block text-sm font-medium text-green-700">Estilo</label>
+                    <input type="text" name="estilo" id="estilo" autocomplete="address-level2" class="mt-1 block rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></div>
+                </div>
+                <div class="col-span-2 col-start-1"> 
+                    <label for="city" class="block text-sm font-medium text-green-700">Tempo</label>
+                    <input type="time" step="2" name="tempo" id="tempo" autocomplete="address-level2" class="mt-1 block rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></div>
+                </div>
+				<center><button type="button" class="btn btn-primary" onclick="addRow();">Add row</button></center>
+			</form>
+		</div>
+		<div class="flex justify-start">
+			<table class="table-auto">
+				<thead>
+					<tr>
+						<th >Estilo</th>
+						<th>Tempo</th>
+					</tr>
+				</thead>
+				<tbody id="result">
+					<tr>
+                        <td class="text-sm font-medium text-gray-900 px-6 py-4 text-left">John</td>
+                        <td>Smith</td>
+                    </tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+
+<!-- component -->
+<script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+
+<section class="antialiased bg-gray-100 text-gray-600 h-screen px-4" x-data="app">
+    <div class="flex flex-col justify-center h-full">
+        <!-- Table -->
+        <div class="w-full max-w-2xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
+            <header class="px-5 py-4 border-b border-gray-100">
+                <div class="font-semibold text-gray-800">Manage Carts</div>
+            </header>
+
+            <div class="overflow-x-auto p-3">
+                <table class="table-auto w-full">
+                    <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
+                        <tr>
+                            <th></th>
+                            <th class="p-2">
+                                <div class="font-semibold text-left">Product Name</div>
+                            </th>
+                            <th class="p-2">
+                                <div class="font-semibold text-left">Quantity</div>
+                            </th>
+                            <th class="p-2">
+                                <div class="font-semibold text-left">Total</div>
+                            </th>
+                            <th class="p-2">
+                                <div class="font-semibold text-center">Action</div>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="text-sm divide-y divide-gray-100">
+                        <!-- record 1 -->
+                        <tr>
+                            <td class="p-2">
+                                <input type="checkbox" class="w-5 h-5" value="id-1"
+                                    @click="toggleCheckbox($el, 2890.66)" />
+                            </td>
+                            <td class="p-2">
+                                <div class="font-medium text-gray-800">
+                                    Samsung Galaxy Note 4
+                                </div>
+                            </td>
+                            <td class="p-2">
+                                <div class="text-left">1</div>
+                            </td>
+                            <td class="p-2">
+                                <div class="text-left font-medium text-green-500">
+                                    RM 2,890.66
+                                </div>
+                            </td>
+                            <td class="p-2">
+                                <div class="flex justify-center">
+                                    <button>
+                                        <svg class="w-8 h-8 hover:text-blue-600 rounded-full hover:bg-gray-100 p-1"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- record 2 -->
+                        <tr>
+                            <td class="p-2">
+                                <input type="checkbox" class="w-5 h-5" value="id-2"
+                                    @click="toggleCheckbox($el, 120.50)" />
+                            </td>
+                            <td class="p-2">
+                                <div>
+                                    <div class="font-medium text-gray-800">Logitech Keyboard</div>
+                                </div>
+                            </td>
+                            <td class="p-2">
+                                <div class="text-left">1</div>
+                            </td>
+                            <td class="p-2">
+                                <div class="text-left font-medium text-green-500">
+                                    RM 120.50
+                                </div>
+                            </td>
+                            <td class="p-2">
+                                <div class="flex justify-center">
+                                    <button>
+                                        <svg class="w-8 h-8 hover:text-blue-600 rounded-full hover:bg-gray-100 p-1"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- record 3 -->
+                        <tr>
+                            <td class="p-2">
+                                <input type="checkbox" class="w-5 h-5" value="id-3"
+                                    @click="toggleCheckbox($el, 15.00)" />
+                            </td>
+                            <td class="p-2">
+                                <div>
+                                    <div class="font-medium text-gray-800">Earphone</div>
+                                </div>
+                            </td>
+                            <td class="p-2">
+                                <div class="text-left">1</div>
+                            </td>
+                            <td class="p-2">
+                                <div class="text-left font-medium text-green-500">RM 15.00</div>
+                            </td>
+                            <td class="p-2">
+                                <div class="flex justify-center">
+                                    <button>
+                                        <svg class="w-8 h-8 hover:text-blue-600 rounded-full hover:bg-gray-100 p-1"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- total amount -->
+            <div class="flex justify-end font-bold space-x-4 text-2xl border-t border-gray-100 px-5 py-4">
+                <div>Total</div>
+                <div class="text-blue-600">RM <span x-text="total.toFixed(2)"></span></div>
+            </div>
+
+            <div class="flex justify-end">
+                <!-- send this data to backend (note: use class 'hidden' to hide this input) -->
+                <input type="hidden" class="border border-black bg-gray-50" x-model="selected" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("alpine:init", () => {
+        Alpine.data("app", () => ({
+            total: 0,
+            selected: [],
+
+            toggleCheckbox(element, amount) {
+                if (element.checked) {
+                    this.selected.push(element.value);
+                    this.total += amount;
+                } else {
+                    const index = this.selected.indexOf(element.value);
+
+                    if (index > -1) this.selected.splice(index, 1);
+
+                    this.total -= amount;
+                }
+            },
+        }));
+    });
+</script>
+    
+
+
+   
+
+    
+<script src="js/script.js"></script>	
+<script>
+    function addRow(){
+	var estilo=document.getElementById('estilo').value;
+	var lastname=document.getElementById('tempo').value;
+ 
+	if(estilo =="" || lastname ==""){
+		alert("Please enter something first!");
+	}else{
+		var parent=document.createElement('tr');
+		var col1=document.createElement('td');
+		var col2=document.createElement('p');
+		var text1=document.createTextNode(estilo);
+		var text2=document.createTextNode(lastname);
+        col1.className="text-sm font-medium text-gray-900 px-6 py-4 text-left";
+
+		col1.appendChild(text1);
+		col2.appendChild(text2);
+		parent.appendChild(col1);
+		parent.appendChild(col2);
+ 
+		document.getElementById('result').appendChild(parent); 
+		document.getElementById('estilo').value="";
+		document.getElementById('lastname').value="";
+
+	}
+ 
+}
+</script>
+
+
+
+<!-- <div id="conteudo">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </div> -->
+  <button onclick="myFunction()">Limpar</button>
+
+<script>
+function myFunction() {
+    document.getElementById('result').remove()
+}
+//quando você clicar no botão, o mesmo será deletado
+</script>
+
+
+</body>	
+</html>

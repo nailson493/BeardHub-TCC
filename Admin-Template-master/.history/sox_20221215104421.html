@@ -1,0 +1,84 @@
+<!DOCTYPE hmtl>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="https://sourcecodester.com">Sourcecodester</a>
+		</div>
+	</nav>
+	<div class="col-md-3"></div>
+	<div class="col-md-6 well">
+		<h3 class="text-primary">JavaScript - Add New Row In Table</h3>
+		<hr style="border-top:1px dotted #ccc;"/>
+		<div class="col-md-4">
+			<form>
+				<div class="form-group">
+					<label>Firstname</label>
+					<input type="text" id="firstname" class="form-control" />
+				</div>
+				<div class="form-group">
+					<label>Lastname</label>
+					<input type="text" id="lastname" class="form-control" />
+				</div>
+				<center><button type="button" class="btn btn-primary" onclick="addRow();">Add row</button></center>
+			</form>
+		</div>
+		<div class="col-md-8">
+			<table class="table table-bordered">
+				<thead class="alert-info">
+					<tr>
+						<th>Firstname</th>
+						<th>Lastname</th>
+					</tr>
+				</thead>
+				<tbody id="result">
+					<tr><td>John</td><td>Smith</td></tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+<script src="js/script.js"></script>	
+<script>
+    function addRow(){
+	var firstname=document.getElementById('firstname').value;
+	var lastname=document.getElementById('lastname').value;
+ 
+	if(firstname =="" || lastname ==""){
+		alert("Please enter something first!");
+	}else{
+		var parent=document.createElement('tr');
+		var col1=document.createElement('td');
+		var col2=document.createElement('td');
+		var text1=document.createTextNode(firstname);
+		var text2=document.createTextNode(lastname);
+		col1.appendChild(text1);
+		col2.appendChild(text2);
+		parent.appendChild(col1);
+		parent.appendChild(col2);
+ 
+		document.getElementById('result').appendChild(parent);
+ 
+		document.getElementById('firstname').value="";
+		document.getElementById('lastname').value="";
+	}
+ 
+}
+</script>
+
+
+<body>
+<div>oiii</div><!---Esse div é so pra atrapalhar--->
+<button>Oláa</button>
+<script>
+button.addEventListener('click', function(){ 
+document.body.removeChild(document.body.querySelector("button"))})
+//quando você clicar no botão, o mesmo será deletado
+</script>
+
+
+</body>	
+</html>
