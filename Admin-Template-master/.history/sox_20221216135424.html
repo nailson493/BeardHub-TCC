@@ -1,0 +1,178 @@
+<!DOCTYPE hmtl>
+<html lang="en">
+	<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Tailwind Admin Starter Template : Tailwind Toolbox</title>
+            <meta name="author" content="name">
+            <meta name="description" content="description here">
+            <meta name="keywords" content="keywords,here">
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> <!--Replace with your tailwind.css once created-->
+            <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+            <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+            <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
+            <script src="https://cdn.tailwindcss.com"></script>
+        
+            <link rel="stylesheet" href="today.css">
+	</head>
+    <body>
+			
+                <div class="col-span-2 col-start-1"> 
+                    <label for="city" class="block text-sm font-medium text-green-700">Estilo</label>
+                    <input type="text" name="estilo" id="estilo" autocomplete="address-level2" class="mt-1 block rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+                <div class="col-span-2 col-start-1"> 
+                    <label for="city" class="block text-sm font-medium text-green-700">Tempo</label>
+                    <input type="time" step="2" name="tempo" id="tempo" autocomplete="address-level2" class="mt-1 block rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+                
+                <div class="w-96 text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-100 rounded-t-lg -pt-1 mt-10">
+                    <button type="button" class="relative  top-4 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" onclick="myFunction()">Limpar</button>
+                    <button type="button" class=" ml-[17rem] -top-8 relative text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" onclick="addRow();">Adicionar</button>
+                </div>
+                <div class="flex justify-start -mt-5">
+                    <table class="w-96 text-sm text-left text-gray-100 dark:text-gray-100">
+                        <thead class="bg-white border-b dark:bg-gray-300 dark:border-gray-700">
+                            <tr>
+                                <th  scope="row" class="py-4 px-6 font-medium text-black whitespace-nowrap dark:text-black">Estilo</th>
+                                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-black">Tempo</th>
+                            </tr>
+                        </thead>
+                        <tbody id="result">
+                            <tr class="bg-white border-b dark:bg-gray-100 dark:border-gray-700">
+                                <td scope="row"  class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-black">John</td>
+                                <td scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-blck">Smith</td>
+                            </tr>
+                        </tbody>
+                    </table>
+	            </div>
+
+                <div class="grid grid-cols-3 gap-4 w-96 ">
+                    <div class="col-span-1">
+                        <label for="country" class="block text-sm font-medium text-gray-700">Segunda</label>
+                        <select id="segunda" name="segunda" autocomplete="segunda-name"  onchange="val()" class="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                            <option value="aberto" >Aberto</option>
+                            <option value="fechado" >Fechado</option>
+                        </select>
+                    </div>
+                    <div class="col-span-6 sm:col-span-1">
+                        <label for="last-name" class="block text-sm font-medium text-gray-700">Abre</label>
+                        <input type="time" name="last-name" id="last-name" autocomplete="family-name" value="08:30" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                        </div>
+                        <div class="col-span-6 sm:col-span-1">
+                            <label for="last-name" class="block text-sm font-medium text-gray-700">Fechado</label>
+                            <input type="time" name="fist-name" id="fist-name" autocomplete="family-name" value="18:30" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                            </div>
+                    <!-- ... -->
+                    <div class="col-span-1">
+                        <label for="country" class="block text-sm font-medium text-gray-700">Terça</label>
+                        <select id="segunda" name="segunda" autocomplete="segunda-name" class="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                            <option  value="aberto" >Aberto</option>
+                            <option  value="fechado">Fechado</option>
+                        </select>
+                    </div>
+                    <div class="col-span-6 sm:col-span-1">
+                        <label for="last-name" class="block text-sm font-medium text-gray-700">Abre</label>
+                        <input type="time" name="last-name" id="last-name" autocomplete="family-name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                        </div>
+                        <div class="col-span-6 sm:col-span-1">
+                            <label for="last-name" class="block text-sm font-medium text-gray-700">Abre</label>
+                            <input type="time" name="last-name" id="last-name" autocomplete="family-name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                            </div>
+                  </div>
+    
+
+                  <!-- <select id="one" " >
+                    <option value="aberto">Aberto</option>
+                    <option value="fechado">Fechado</option>
+                  </select>
+                  <p id="demo"></p>  -->
+                  
+                  <input type="time" name="last-name" id="two" autocomplete="family-name" value="08:00" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" disabled>
+                
+                  
+
+
+                  <!-- <script>
+                                document.getElementById("one").onchange = function myFunction() {
+                                document.getElementById("two").setAttribute("disabled", "disabled");
+                                document.getElementById('two').value="08:00";
+                           
+                            if (this.value == 'aberto')
+                                document.getElementById("two").removeAttribute("disabled");
+                                // document.getElementById('two').value="";
+                                // document.getElementById('two').setAttribute("disabled")
+                            if (this.value == 'fechado')
+                                document.getElementById('two').value="0:00";
+                                };
+                    </script> -->
+
+                    <script>
+                        function val() {
+
+                           
+                            d = document.getElementById("segunda").value;
+                            if (d == 'aberto'){
+                                document.getElementById("last-name").removeAttribute("disabled");
+                                document.getElementById("fist-name").removeAttribute("disabled");                  
+                            } else if (d == 'fechado'){  
+                                document.getElementById('last-name').value="";
+                                document.getElementById("last-name").setAttribute("disabled", "disabled");
+                                document.getElementById("fist-name").setAttribute("disabled", "disabled");
+                            
+                            }
+                        }
+                     
+                        </script>
+
+
+    
+<script src="js/script.js"></script>	
+<script>
+    function addRow(){
+	var estilo=document.getElementById('estilo').value;
+	var tempo=document.getElementById('tempo').value;
+ 
+	if(estilo =="" || tempo ==""){
+		alert("Por favor preencha todos os campos");
+	}else{
+		var parent=document.createElement('tr');
+		var col1=document.createElement('td');
+		var col2=document.createElement('p');
+		var text1=document.createTextNode(estilo);
+		var text2=document.createTextNode(tempo);
+        parent.className="bg-white border-b dark:bg-gray-100 dark:border-gray-700";
+        col1.className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-black";
+        col2.className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-black";
+
+		col1.appendChild(text1);
+		col2.appendChild(text2);
+		parent.appendChild(col1);
+		parent.appendChild(col2);
+ 
+		document.getElementById('result').appendChild(parent); 
+		document.getElementById('estilo').value="";
+		document.getElementById('lastname').value="";
+
+	}
+ 
+}
+</script>
+
+
+
+
+<script>
+function myFunction() {
+    document.getElementById('result').remove()
+}
+//quando você clicar no botão, o mesmo será deletado
+</script>
+
+
+</body>	
+</html>

@@ -45,23 +45,24 @@ export {
     switch($_GET['r']){
 
         case 'signup':
-            include "views/signup.php";
-            break;
+                include "views/signup.php";
+                break;
         case 'login':
-            include "views/login.php";
-            break;
+                include "views/login.php";
+                break;
         case 'inicial':
-            include "views/a.php";
-            break;
+                include "views/inicial.php";
+                break;
         case 'cadUser':
-            include "views/cadUser.php";
-            break;
+                include "views/cadUser.php";
+                break;
+        case 'estabelecimento':
+                include "views/estabelecimento.php";
+                break;
         default:
-            include "views/inicial.php";
-            break;
-        
-    
-
+                include "views/inicial.php";
+                break;
+            
     }
     
 

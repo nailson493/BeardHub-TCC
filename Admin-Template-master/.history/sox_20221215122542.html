@@ -1,0 +1,185 @@
+<!DOCTYPE hmtl>
+<html lang="en">
+	<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Tailwind Admin Starter Template : Tailwind Toolbox</title>
+            <meta name="author" content="name">
+            <meta name="description" content="description here">
+            <meta name="keywords" content="keywords,here">
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> <!--Replace with your tailwind.css once created-->
+            <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+            <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+            <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
+            <script src="https://cdn.tailwindcss.com"></script>
+        
+            <link rel="stylesheet" href="today.css">
+	</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="https://sourcecodester.com">Sourcecodester</a>
+		</div>
+	</nav>
+	<div class="col-md-3"></div>
+	<div class="col-md-6 well">
+		<h3 class="text-primary">JavaScript - Add New Row In Table</h3>
+		<hr style="border-top:1px dotted #ccc;"/>
+		<div class="col-md-4">
+			<form>
+                <div class="col-span-2 col-start-1"> 
+                    <label for="city" class="block text-sm font-medium text-green-700">Estilo</label>
+                    <input type="text" name="estilo" id="estilo" autocomplete="address-level2" class="mt-1 block rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></div>
+                </div>
+                <div class="col-span-2 col-start-1"> 
+                    <label for="city" class="block text-sm font-medium text-green-700">Tempo</label>
+                    <input type="time" step="2" name="tempo" id="tempo" autocomplete="address-level2" class="mt-1 block rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></div>
+                </div>
+				<center><button type="button" class="btn btn-primary" onclick="addRow();">Add row</button></center>
+			</form>
+		</div>
+		<div class="flex justify-start">
+			<table class="table-auto">
+				<thead>
+					<tr>
+						<th >Estilo</th>
+						<th>Tempo</th>
+					</tr>
+				</thead>
+				<tbody id="result">
+					<tr>
+                        <td >John</td>
+                        <td>Smith</td>
+                    </tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+
+
+    <!-- <div class="flex flex-col">
+        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="overflow-hidden">
+              <table class="min-w-full">
+                <thead class="border-b">
+                  <tr>
+                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                      #
+                    </th>
+                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                      First
+                    </th>
+                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                      Last
+                    </th>
+                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                      Handle
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="result">
+                  <tr class="border-b">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      Mark
+                    </td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      Otto
+                    </td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      @mdo
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2</td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      Jacob
+                    </td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      Thornton
+                    </td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      @fat
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">3</td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      Larry
+                    </td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      Wild
+                    </td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                      @twitter
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+
+   
+
+    
+<script src="js/script.js"></script>	
+<script>
+    function addRow(){
+	var estilo=document.getElementById('estilo').value;
+	var lastname=document.getElementById('tempo').value;
+ 
+	if(estilo =="" || lastname ==""){
+		alert("Please enter something first!");
+	}else{
+		var parent=document.createElement('tr');
+		var col1=document.createElement('td');
+		var col2=document.createElement('p');
+		var text1=document.createTextNode(estilo);
+		var text2=document.createTextNode(lastname);
+		col1.appendChild(text1);
+		col2.appendChild(text2);
+		parent.appendChild(col1);
+		parent.appendChild(col2);
+        col1.className
+ 
+		document.getElementById('result').appendChild(parent); 
+		document.getElementById('estilo').value="";
+        document.getElementById('estilo').value="";
+		document.getElementById('lastname').value="";
+
+	}
+ 
+}
+</script>
+
+
+
+<!-- <div id="conteudo">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </div> -->
+  <button onclick="myFunction()">Limpar</button>
+
+<script>
+function myFunction() {
+    document.getElementById('result').remove()
+}
+//quando você clicar no botão, o mesmo será deletado
+</script>
+
+
+</body>	
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <select name="" id="lo" onchange="asa('lo','ska')">
+    <option value="aberto">aberto</option>
+    <option value="fechado">fechado</option>
+   </select>
+ 
+<input type="time" value="tal"  id="ska">
+
+
+<div class="col-span-1">
+    <label for="week-day" class="block text-sm font-medium text-gray-700">Segunda</label>
+    <select id="monday" name="monday" autocomplete="monday-name" onchange="asa('monday','open-monday')" class="mt-1 block w-full rounded-md border w-full border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+        <option value="open">open</option>
+        <option value="fechado" >Fechado</option>
+    </select>
+</div>
+<div class="col-span-6 sm:col-span-1">
+    <label for="open-monday" class="block text-sm font-medium text-gray-700">Abre</label>
+    <input type="time" name="open-monday" id="open-monday" autocomplete="family-name" value="08:00" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" >
+    </div>
+    <div class="col-span-6 sm:col-span-1">
+        <label for="week-day" class="block text-sm font-medium text-gray-700">Fecha</label>
+        <input type="time" name="closed-monday" id="closed-monday" autocomplete="family-name" value="18:30" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+</div>
+
+
+
+
+ 
+<script>
+  function asa(idselect, idOpen,idClosed){
+        Aselect = document.getElementById(idselect); 
+        AInput = document.getElementById(idInput);     
+        if (Aselect.value == 'fechado') {
+            AInput.setAttribute("disabled","disabled")
+            Az
+        }else {
+            AInput.removeAttribute("disabled")
+        }
+ 
+    };
+</script>
+ 
+ 
+</body>
+</html>
+ <script src="js.js"></script>
+
